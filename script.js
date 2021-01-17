@@ -1,5 +1,4 @@
 let canvas = document.getElementById("snake");
-console.log(canvas);
 let context = canvas.getContext("2d");
 let box = 32;
 let snake = [];
@@ -39,7 +38,7 @@ function update(event){
     if(event.keyCode == 40 && direction != "up") direction = "down";
 }
 
-function inicicarJogo(){
+function iniciarJogo(){
     if(snake[0].x > 15 * box && direction != "left") snake[0].x = 0;
     if(snake[0].x < 0 && direction != "right") snake[0].x = 16 * box;
     if(snake[0].y > 15 * box && direction != "up") snake[0].y = 0;
@@ -83,4 +82,4 @@ function inicicarJogo(){
 
 }
 
-let jogo = setInterval(inicicarJogo, 100);
+let jogo = setInterval(iniciarJogo, 100);
